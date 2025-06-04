@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class Especialidade(models.Model):
     nome = models.CharField('Nome', max_length=100)
     descricao = models.TextField('Descrição', blank=True, null=True)

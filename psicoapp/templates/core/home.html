@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}
-    {{ block.super }}
-{% endblock title %}
+{% block title %}Home - {{ block.super }}{% endblock %}
 
 {% block body %}
+    <header class="home-header">
+        <h1>BEM-VINDO MENTALIZE</h1>
+        <p>Atendimentos Psicológicos</p>
+    </header>
 
-<!-- Codigo html especifico desse arquivo -->
-
-{% endblock body %}
+    <main class="home-main">
+        <section class="home-card">
+            <i class="fas fa-stethoscope home-icon"></i>
+            <h2>ESPECIALIDADES</h2>
+            <p>Especialidades disponiveis dos nossos profissionais.</p>
+            <a href="{% url 'especialidades:list' %}" class="home-btn">
+                <i class="fas fa-sign-in-alt"></i> ACESSAR ESPECIALIDADES
+            </a>
+        </section>
+    </main>
+{% endblock %}

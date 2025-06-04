@@ -1,0 +1,32 @@
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('https://fonts.gstatic.com/s/bebasneue/v9/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.home-header h1,
+.home-card h2,
+.home-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+.home-header h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.home-btn {
+  font-size: 1.2rem;
+}
