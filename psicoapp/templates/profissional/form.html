@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {% if form.instance.id %}Editar{% else %}Cadastrar{% endif %} Profissional - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+  <h2>{% if form.instance.id %}Editar{% else %}Cadastrar{% endif %} Profissional</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <th>{{ form.nome.label_tag }}</th>
+        <td>{{ form.nome }}</td>
+      </tr>
+      <tr>
+        <th>{{ form.email.label_tag }}</th>
+        <td>{{ form.email }}</td>
+      </tr>
+      <tr>
+        <th>{{ form.telefone.label_tag }}</th>
+        <td>{{ form.telefone }}</td>
+      </tr>
+      <tr>
+        <th>{{ form.especialidade.label_tag }}</th>
+        <td>{{ form.especialidade }}</td>
+      </tr>
+      <tr>
+        <th>{{ form.registro_conselho.label_tag }}</th>
+        <td>{{ form.registro_conselho }}</td>
+      </tr>
+    </table>
+
+    <br />
+    <button type="submit">Salvar</button>
+  </form>
+
+  <br />
+  <a href="{% url 'profissional:list' %}">← Voltar para a lista</a>
+{% endblock %}

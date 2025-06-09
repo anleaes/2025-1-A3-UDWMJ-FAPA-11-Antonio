@@ -1,8 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import EspecialidadeForm
 from .models import Especialidade
-
-# Create your views here.
 
 def list_especialidades(request):
     template_name = 'especialidades/list.html'
@@ -37,3 +35,6 @@ def delete_especialidade(request, id_especialidade):
     especialidade = get_object_or_404(Especialidade, id=id_especialidade)
     especialidade.delete()
     return redirect('especialidades:list')
+
+def home(request):
+    return render(request, 'home.html')

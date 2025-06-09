@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
   Lista de Especialidades - {{ block.super }}
 {% endblock %}
 
 {% block body %}
-  <br />
-  <a href="{% url 'especialidades:add' %}">Cadastrar nova especialidade</a>
-  <br />
-  <br />
+  <link rel="stylesheet" href="{% static 'css/especialidades.css' %}">
+
+  <div class="top-bar">
+    <a href="{% url 'especialidades:add' %}" class="btn">Cadastrar nova especialidade</a>
+  </div>
+
   <b>Lista de Especialidades</b>
-  <br />
-  <br />
-  <table border="1">
+  <br /><br />
+
+  <table class="styled-table">
     <thead>
       <tr>
         <th>ID</th>
         <th>Nome</th>
         <th>Descrição</th>
-        <th></th>
-        <th></th>
+        <th colspan="2">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +29,13 @@
         <tr>
           <td>{{ especialidade.id }}</td>
           <td>{{ especialidade.nome }}</td>
-          <td>{{ especialidade.descricao|default:"-"|truncatechars:50 }}</td>
+          <td>
+            {% if especialidade.descricao %}
+              {{ especialidade.descricao|truncatechars:50 }}
+            {% else %}
+              -
+            {% endif %}
+          </td>
           <td>
             <a href="{% url 'especialidades:edit' especialidade.id %}">Editar</a>
           </td>
@@ -35,7 +43,13 @@
             <a href="{% url 'especialidades:delete' especialidade.id %}">Excluir</a>
           </td>
         </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">Nenhuma especialidade cadastrada.</td>
+        </tr>
       {% endfor %}
     </tbody>
   </table>
+
+  <br><br>
 {% endblock %}
