@@ -13,9 +13,18 @@
         <section class="home-card">
             <i class="fas fa-stethoscope home-icon"></i>
             <h2>ESPECIALIDADES</h2>
-            <p>Especialidades disponiveis dos nossos profissionais.</p>
+            <p>Especialidades disponíveis dos nossos profissionais.</p>
             <a href="{% url 'especialidades:list' %}" class="home-btn">
                 <i class="fas fa-sign-in-alt"></i> ACESSAR ESPECIALIDADES
+            </a>
+        </section>
+
+        <section class="home-card">
+            <i class="fas fa-user-md home-icon"></i>
+            <h2>PROFISSIONAIS</h2>
+            <p>Conheça os profissionais disponíveis para atendimento.</p>
+            <a href="{% url 'profissionais:list' %}" class="home-btn">
+                <i class="fas fa-sign-in-alt"></i> ACESSAR PROFISSIONAIS
             </a>
         </section>
     </main>

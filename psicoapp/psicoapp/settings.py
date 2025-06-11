@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'apps.especialidades',
     'apps.profissionais',
+
 ]
 
 MIDDLEWARE = [
