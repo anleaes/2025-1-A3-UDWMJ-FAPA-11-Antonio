@@ -27,5 +27,15 @@
                 <i class="fas fa-sign-in-alt"></i> ACESSAR PROFISSIONAIS
             </a>
         </section>
+        
+        <section class="home-card">
+            <i class="fas fa-user-injured home-icon"></i>
+            <h2>PACIENTES</h2>
+            <p>Cadastre e visualize os pacientes atendidos.</p>
+            <a href="{% url 'pacientes:listar' %}" class="home-btn">
+            <i class="fas fa-sign-in-alt"></i> ACESSAR PACIENTES
+            </a>
+        </section>
+
     </main>
 {% endblock %}
