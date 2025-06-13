@@ -1,7 +1,8 @@
 from django.db import models
-from categorias.models import Categoria
+from apps.categorias.models import Categoria
 
 # Create your models here.
+
 class Medicamento(models.Model):
     nome = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
