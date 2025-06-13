@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'apps.profissionais',
     'apps.pacientes',
     'apps.atendimentos',
+    'apps.categorias',
 ]
 
 MIDDLEWARE = [
