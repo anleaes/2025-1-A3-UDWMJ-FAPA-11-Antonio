@@ -28,4 +28,4 @@ def excluir_categoria(request, id_categoria):
     if request.method == 'POST':
         categoria.delete()
         return redirect('categorias:listar')
-    return render(request, 'categorias/confirmar_exclusao.html', {'categoria': categoria})
+    return render(request, 'categorias/confirm.html', {'categoria': categoria})
