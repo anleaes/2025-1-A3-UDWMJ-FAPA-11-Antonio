@@ -53,7 +53,16 @@
             <a href="{% url 'categorias:listar' %}" class="home-btn">
                 <i class="fas fa-sign-in-alt"></i> ACESSAR CATEGORIAS
             </a>
-    </section>
+        
+        </section>
+        <section class="home-card">
+            <i class="fas fa-pills home-icon"></i>
+            <h2>MEDICAMENTOS</h2>
+            <p>Gerencie os medicamentos cadastrados no sistema.</p>
+            <a href="{% url 'medicamentos:listar' %}" class="home-btn">
+            <i class="fas fa-sign-in-alt"></i> ACESSAR MEDICAMENTOS
+            </a>
+        </section>
 
     </main>
 {% endblock %}

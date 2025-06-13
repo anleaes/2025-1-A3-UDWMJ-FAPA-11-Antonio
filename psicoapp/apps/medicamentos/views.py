@@ -32,4 +32,4 @@ def excluir_medicamento(request, id_medicamento):
     if request.method == 'POST':
         medicamento.delete()
         return redirect('medicamentos:listar')
-    return render(request, 'medicamentos/confirmar_exclusao.html', {'medicamento': medicamento})
+    return render(request, 'medicamentos/confirm.html', {'medicamento': medicamento})
