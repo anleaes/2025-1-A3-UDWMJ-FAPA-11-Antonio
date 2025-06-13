@@ -22,7 +22,7 @@ def editar_profissional(request, id):
         form = ProfissionalForm(request.POST, instance=profissional)
         if form.is_valid():
             form.save()
-            return redirect('profissionais:listar')
+            return redirect('profissionais:list')
     else:
         form = ProfissionalForm(instance=profissional)
     return render(request, 'profissionais/form.html', {'form': form})
