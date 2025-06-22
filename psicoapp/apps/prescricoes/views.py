@@ -6,7 +6,7 @@ from .forms import PrescricaoForm
 
 def listar_prescricoes(request):
     prescricoes = Prescricao.objects.all()
-    return render(request, 'prescricoes/listar.html', {'prescricoes': prescricoes})
+    return render(request, 'prescricoes/list.html', {'prescricoes': prescricoes})
 
 def criar_prescricao(request):
     if request.method == 'POST':
@@ -34,4 +34,4 @@ def excluir_prescricao(request, id_prescricao):
     if request.method == 'POST':
         prescricao.delete()
         return redirect('prescricoes:listar')
-    return render(request, 'prescricoes/confirmar_exclusao.html', {'prescricao': prescricao})
+    return render(request, 'prescricoes/confirm.html', {'prescricao': prescricao})
