@@ -27,8 +27,12 @@ urlpatterns = [
     path('profissionais/', include(('profissional.urls', 'profissional'), namespace='profissional')),
 =======
     path('profissionais/', include('apps.profissionais.urls', namespace='profissionais')),
+<<<<<<< HEAD
 
 >>>>>>> origin/paciente-models
+=======
+    path('pacientes/', include('apps.pacientes.urls', namespace='pacientes')),
+>>>>>>> origin/paciente-urls
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
