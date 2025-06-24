@@ -30,6 +30,7 @@ urlpatterns = [
     path('medicamentos/', include('apps.medicamentos.urls', namespace='medicamentos')),
     path('prescricoes/', include('apps.prescricoes.urls', namespace='prescricoes')),
     path('prontuarios/', include('apps.prontuarios.urls', namespace='prontuarios')),
+    path('medicamentoitens/', include('apps.medicamentoitens.urls', namespace='medicamentoitens')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
