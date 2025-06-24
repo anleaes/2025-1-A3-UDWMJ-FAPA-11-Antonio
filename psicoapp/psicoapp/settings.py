@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
     'apps.especialidades',
+<<<<<<< HEAD
     'apps.profissional'
+=======
+    'apps.profissionais',
+>>>>>>> origin/profissional-models
 ]
 
 MIDDLEWARE = [
