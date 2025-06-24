@@ -59,7 +59,11 @@ INSTALLED_APPS = [
 >>>>>>> origin/paciente-templates
 =======
     'apps.atendimentos',
+<<<<<<< HEAD
 >>>>>>> origin/categoria
+=======
+    'apps.categorias',
+>>>>>>> origin/categoria-models
 ]
 
 MIDDLEWARE = [
