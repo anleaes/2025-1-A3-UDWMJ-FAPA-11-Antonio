@@ -33,7 +33,11 @@ urlpatterns = [
 =======
     path('pacientes/', include('apps.pacientes.urls', namespace='pacientes')),
     path('atendimentos/', include('apps.atendimentos.urls', namespace='atendimentos')),
-
+    path('categorias/', include('apps.categorias.urls', namespace='categorias')),
 ]
 
+<<<<<<< HEAD
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> origin/categoria-urls
