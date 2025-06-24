@@ -23,14 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
     path('especialidades/', include('especialidades.urls', namespace='especialidades')),
-<<<<<<< HEAD
-    path('profissionais/', include(('profissional.urls', 'profissional'), namespace='profissional')),
-=======
     path('profissionais/', include('apps.profissionais.urls', namespace='profissionais')),
-<<<<<<< HEAD
-
->>>>>>> origin/paciente-models
-=======
     path('pacientes/', include('apps.pacientes.urls', namespace='pacientes')),
     path('atendimentos/', include('apps.atendimentos.urls', namespace='atendimentos')),
     path('categorias/', include('apps.categorias.urls', namespace='categorias')),
@@ -40,8 +33,4 @@ urlpatterns = [
     path('medicamentoitens/', include('apps.medicamentoitens.urls', namespace='medicamentoitens')),
 ]
 
-<<<<<<< HEAD
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> origin/categoria-urls

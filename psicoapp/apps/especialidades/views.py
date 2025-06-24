@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
-=======
-from django.shortcuts import render, redirect
->>>>>>> origin/profissional-models
 from .forms import EspecialidadeForm
 from .models import Especialidade
 from django.shortcuts import get_object_or_404

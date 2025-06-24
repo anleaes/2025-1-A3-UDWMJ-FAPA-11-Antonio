@@ -1,55 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-  Lista de Especialidades - {{ block.super }}
-{% endblock %}
+{% block title %}Lista de Especialidades - {{ block.super }}{% endblock %}
 
 {% block body %}
-  <link rel="stylesheet" href="{% static 'css/especialidades.css' %}">
+<link rel="stylesheet" href="{% static 'css/especialidades.css' %}">
 
-  <div class="top-bar">
-    <a href="{% url 'especialidades:add' %}" class="btn">Cadastrar nova especialidade</a>
-  </div>
+<div class="container mt-4">
+    <h2 class="mb-4">Lista de Especialidades</h2>
 
-  <b>Lista de Especialidades</b>
-  <br /><br />
+    <a href="{% url 'especialidades:add' %}" class="btn btn-success mb-3">
+        <i class="fas fa-plus"></i> Nova Especialidade
+    </a>
 
-  <table class="styled-table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th colspan="2">Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for especialidade in especialidades %}
-        <tr>
-          <td>{{ especialidade.id }}</td>
-          <td>{{ especialidade.nome }}</td>
-          <td>
-            {% if especialidade.descricao %}
-              {{ especialidade.descricao|truncatechars:50 }}
-            {% else %}
-              -
-            {% endif %}
-          </td>
-          <td>
-            <a href="{% url 'especialidades:edit' especialidade.id %}">Editar</a>
-          </td>
-          <td>
-            <a href="{% url 'especialidades:delete' especialidade.id %}">Excluir</a>
-          </td>
-        </tr>
-      {% empty %}
-        <tr>
-          <td colspan="5">Nenhuma especialidade cadastrada.</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <br><br>
+    {% if especialidades %}
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for especialidade in especialidades %}
+            <tr>
+                <td>{{ especialidade.id }}</td>
+                <td>{{ especialidade.nome }}</td>
+                <td>{{ especialidade.descricao|default:"-"|truncatechars:50 }}</td>
+                <td>
+                    <a href="{% url 'especialidades:edit' especialidade.id %}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{% url 'especialidades:delete' especialidade.id %}" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Nenhuma especialidade cadastrada.</p>
+    {% endif %}
+</div>
 {% endblock %}

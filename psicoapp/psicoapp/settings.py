@@ -43,47 +43,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
     'apps.especialidades',
-<<<<<<< HEAD
-    'apps.profissional'
-=======
     'apps.profissionais',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/profissional-models
-=======
-
->>>>>>> origin/paciente-models
-=======
     'apps.pacientes',
-<<<<<<< HEAD
->>>>>>> origin/paciente-templates
-=======
     'apps.atendimentos',
-<<<<<<< HEAD
->>>>>>> origin/categoria
-=======
     'apps.categorias',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/categoria-models
-=======
-    'apps.medicamento',
->>>>>>> origin/medicamento-views
-=======
     'apps.medicamentos',
-<<<<<<< HEAD
->>>>>>> origin/medicamento-templates
-=======
     'apps.prescricoes',
-<<<<<<< HEAD
->>>>>>> origin/prescricao-urls
-=======
     'apps.prontuarios',
-<<<<<<< HEAD
->>>>>>> origin/prontuario-urls
-=======
     'apps.medicamentoitens'
->>>>>>> origin/medicamento-item-templates
 ]
 
 MIDDLEWARE = [
