@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Prescrições - {{ block.super }}{% endblock %}
+
+{% block body %}
+<h2>Lista de Prescrições</h2>
+
+<a href="{% url 'prescricoes:criar' %}" class="btn btn-success">Nova Prescrição</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Atendimento</th>
+            <th>Data</th>
+            <th>Observações</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prescricao in prescricoes %}
+        <tr>
+            <td>{{ prescricao.id }}</td>
+            <td>{{ prescricao.atendimento }}</td>
+            <td>{{ prescricao.data }}</td>
+            <td>{{ prescricao.observacoes }}</td>
+            <td>
+                <a href="{% url 'prescricoes:editar' prescricao.id %}" class="btn btn-primary btn-sm">Editar</a>
+                <a href="{% url 'prescricoes:excluir' prescricao.id %}" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">Nenhuma prescrição cadastrada.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

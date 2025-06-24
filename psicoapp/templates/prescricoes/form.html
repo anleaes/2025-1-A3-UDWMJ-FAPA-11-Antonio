@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ titulo }} - {{ block.super }}{% endblock %}
+
+{% block body %}
+<h2>{{ titulo }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a href="{% url 'prescricoes:listar' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
