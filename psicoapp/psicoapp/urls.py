@@ -23,7 +23,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
     path('especialidades/', include('especialidades.urls', namespace='especialidades')),
+<<<<<<< HEAD
     path('profissionais/', include(('profissional.urls', 'profissional'), namespace='profissional')),
+=======
+    path('profissionais/', include('apps.profissionais.urls', namespace='profissionais')),
+
+>>>>>>> origin/paciente-models
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

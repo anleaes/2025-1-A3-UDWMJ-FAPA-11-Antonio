@@ -47,7 +47,11 @@ INSTALLED_APPS = [
     'apps.profissional'
 =======
     'apps.profissionais',
+<<<<<<< HEAD
 >>>>>>> origin/profissional-models
+=======
+
+>>>>>>> origin/paciente-models
 ]
 
 MIDDLEWARE = [

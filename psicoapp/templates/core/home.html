@@ -6,6 +6,7 @@
 {% block body %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
+<<<<<<< HEAD
 <div class="home-container">
   <h1>👥 BEM-VINDO AO <strong>MENTALIZE</strong></h1>
   <p>Atendimentos Psicológicos de forma ética e acolhedora.</p>
@@ -23,3 +24,25 @@
   </div>
 </div>
 {% endblock %}
+=======
+    <main class="home-main">
+        <section class="home-card">
+            <i class="fas fa-stethoscope home-icon"></i>
+            <h2>ESPECIALIDADES</h2>
+            <p>Especialidades disponíveis dos nossos profissionais.</p>
+            <a href="{% url 'especialidades:list' %}" class="home-btn">
+                <i class="fas fa-sign-in-alt"></i> ACESSAR ESPECIALIDADES
+            </a>
+        </section>
+
+        <section class="home-card">
+            <i class="fas fa-user-md home-icon"></i>
+            <h2>PROFISSIONAIS</h2>
+            <p>Conheça os profissionais disponíveis para atendimento.</p>
+            <a href="{% url 'profissionais:list' %}" class="home-btn">
+                <i class="fas fa-sign-in-alt"></i> ACESSAR PROFISSIONAIS
+            </a>
+        </section>
+    </main>
+{% endblock %}
+>>>>>>> origin/paciente-models
