@@ -63,7 +63,11 @@ INSTALLED_APPS = [
 >>>>>>> origin/categoria
 =======
     'apps.categorias',
+<<<<<<< HEAD
 >>>>>>> origin/categoria-models
+=======
+    'apps.medicamento',
+>>>>>>> origin/medicamento-views
 ]
 
 MIDDLEWARE = [
