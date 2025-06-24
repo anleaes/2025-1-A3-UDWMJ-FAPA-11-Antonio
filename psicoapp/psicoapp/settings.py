@@ -75,7 +75,11 @@ INSTALLED_APPS = [
 >>>>>>> origin/medicamento-templates
 =======
     'apps.prescricoes',
+<<<<<<< HEAD
 >>>>>>> origin/prescricao-urls
+=======
+    'apps.prontuarios',
+>>>>>>> origin/prontuario-urls
 ]
 
 MIDDLEWARE = [
