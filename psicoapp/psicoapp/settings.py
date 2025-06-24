@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'apps.categorias',
     'apps.medicamentos',
     'apps.prescricoes',
+    'apps.prontuarios',
 ]
 
 MIDDLEWARE = [
