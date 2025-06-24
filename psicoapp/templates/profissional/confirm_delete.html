@@ -1,0 +1,8 @@
+<h2>Confirmar exclusão</h2>
+<p>Tem certeza que deseja excluir o profissional "{{ profissional.nome }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, deletar</button>
+    <a href="{% url 'profissional:list' %}">Cancelar</a>
+</form>

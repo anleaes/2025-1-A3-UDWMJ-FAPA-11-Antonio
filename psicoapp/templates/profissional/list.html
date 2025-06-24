@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Lista de Profissionais - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+  <link rel="stylesheet" href="{% static 'css/profissional.css' %}">
+
+  <div class="top-bar">
+    <a href="{% url 'profissional:add' %}" class="btn">Cadastrar novo profissional</a>
+  </div>
+
+  <b>Lista de Profissionais</b>
+  <br /><br />
+
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Especialidades</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for profissional in profissionais %}
+        <tr>
+          <td>{{ profissional.id }}</td>
+          <td>{{ profissional.nome }}</td>
+          <td>{{ profissional.email|default:"-" }}</td>
+          <td>{{ profissional.telefone|default:"-" }}</td>
+          <td>
+            <ul>
+              {% for e in especialidades %}
+                {% if e.profissional.id == profissional.id %}
+                  <li>{{ e.especialidade.nome }} ({{ e.registro_conselho }})</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </td>
+          <td><a href="{% url 'profissional:edit' profissional.id %}">Editar</a></td>
+          <td><a href="{% url 'profissional:delete' profissional.id %}">Excluir</a></td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="7">Nenhum profissional cadastrado.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

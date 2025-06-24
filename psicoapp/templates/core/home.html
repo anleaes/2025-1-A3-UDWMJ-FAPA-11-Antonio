@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Home - {{ block.super }}{% endblock %}
+{% block title %}Bem-vindo Mentalize{% endblock %}
 
 {% block body %}
-    <header class="home-header">
-        <h1>BEM-VINDO MENTALIZE</h1>
-        <p>Atendimentos Psicológicos</p>
-    </header>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 
-    <main class="home-main">
-        <section class="home-card">
-            <i class="fas fa-stethoscope home-icon"></i>
-            <h2>ESPECIALIDADES</h2>
-            <p>Especialidades disponiveis dos nossos profissionais.</p>
-            <a href="{% url 'especialidades:list' %}" class="home-btn">
-                <i class="fas fa-sign-in-alt"></i> ACESSAR ESPECIALIDADES
-            </a>
-        </section>
-    </main>
+<div class="home-container">
+  <h1>👥 BEM-VINDO AO <strong>MENTALIZE</strong></h1>
+  <p>Atendimentos Psicológicos de forma ética e acolhedora.</p>
+
+  <div class="home-section">
+    <h2>🧠 Especialidades</h2>
+    <p>Conheça as especialidades oferecidas pelos nossos profissionais.</p>
+    <a href="{% url 'especialidades:list' %}" class="home-button">Ver Especialidades</a>
+  </div>
+
+  <div class="home-section">
+    <h2>👨‍⚕️ Profissionais</h2>
+    <p>Veja quem faz parte da nossa equipe técnica qualificada.</p>
+    <a href="{% url 'profissional:list' %}" class="home-button">Ver Profissionais</a>
+  </div>
+</div>
 {% endblock %}
