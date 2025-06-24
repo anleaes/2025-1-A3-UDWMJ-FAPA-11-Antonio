@@ -32,7 +32,7 @@ urlpatterns = [
 >>>>>>> origin/paciente-models
 =======
     path('pacientes/', include('apps.pacientes.urls', namespace='pacientes')),
->>>>>>> origin/paciente-urls
+    path('atendimentos/', include('apps.atendimentos.urls', namespace='atendimentos')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
