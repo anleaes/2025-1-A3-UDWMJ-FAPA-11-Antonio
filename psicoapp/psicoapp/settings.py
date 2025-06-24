@@ -48,10 +48,14 @@ INSTALLED_APPS = [
 =======
     'apps.profissionais',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/profissional-models
 =======
 
 >>>>>>> origin/paciente-models
+=======
+    'apps.pacientes',
+>>>>>>> origin/paciente-templates
 ]
 
 MIDDLEWARE = [

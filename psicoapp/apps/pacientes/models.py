@@ -5,13 +5,14 @@ from django.db import models
 class Paciente(models.Model):
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=14, unique=True)
+    telefone = models.CharField(max_length=20, default='000000000')
     data_nasc = models.DateField()
 
     def addHistorico(self):
-        pass  # lógica será definida depois
+        pass  
 
     def getHistorico(self):
-        pass  # lógica será definida depois
+        pass  
 
     def __str__(self):
         return self.nome

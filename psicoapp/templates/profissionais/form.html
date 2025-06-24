@@ -7,6 +7,6 @@
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit" class="btn btn-success">Salvar</button>
-  <a href="{% url 'profissionais:listar' %}" class="btn-voltar">Voltar</a>
+  <a href="{% url 'profissionais:list' %}" class="btn-voltar">Voltar</a>
 </form>
 {% endblock %}
