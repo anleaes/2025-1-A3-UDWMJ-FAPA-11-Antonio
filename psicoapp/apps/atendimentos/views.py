@@ -21,9 +21,7 @@ def editar_atendimento(request, id_atendimento):
         return redirect('atendimentos:listar')
     return render(request, 'atendimentos/form.html', {'form': form, 'titulo': 'Editar Atendimento'})
 
-def deletar_atendimento(request, id_atendimento):
+def excluir_atendimento(request, id_atendimento):
     atendimento = get_object_or_404(Atendimento, id=id_atendimento)
-    if request.method == 'POST':
-        atendimento.delete()
-        return redirect('atendimentos:listar')
-    return render(request, 'atendimentos/confirm_delete.html', {'obj': atendimento})
+    atendimento.delete()
+    return redirect('atendimentos:listar')
