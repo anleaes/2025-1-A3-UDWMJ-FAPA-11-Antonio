@@ -29,6 +29,7 @@ urlpatterns = [
     path('categorias/', include('apps.categorias.urls', namespace='categorias')),
     path('medicamentos/', include('apps.medicamentos.urls', namespace='medicamentos')),
     path('prescricoes/', include('apps.prescricoes.urls', namespace='prescricoes')),
+    path('prontuarios/', include('apps.prontuarios.urls', namespace='prontuarios')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
