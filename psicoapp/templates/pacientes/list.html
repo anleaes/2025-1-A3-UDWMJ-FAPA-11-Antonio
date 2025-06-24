@@ -2,6 +2,9 @@
 {% block title %}Pacientes{% endblock %}
 
 {% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/pacientes.css' %}">
+
 <h2 class="text-primary my-4">Lista de Pacientes</h2>
 
 <a href="{% url 'pacientes:criar' %}" class="btn btn-success mb-3">
