@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'categorias'
+app_name = 'apps.categorias'
 
 urlpatterns = [
     path('', views.listar_categorias, name='listar'),
