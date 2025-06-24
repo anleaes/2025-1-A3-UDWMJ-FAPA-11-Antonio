@@ -49,10 +49,21 @@
             <h2>PACIENTES</h2>
             <p>Cadastre e visualize os pacientes atendidos.</p>
             <a href="{% url 'pacientes:listar' %}" class="home-btn">
-            <i class="fas fa-sign-in-alt"></i> ACESSAR PACIENTES
+                <i class="fas fa-sign-in-alt"></i> ACESSAR PACIENTES
             </a>
         </section>
 
+        <section class="home-card">
+            <i class="fas fa-calendar-check home-icon"></i>
+            <h2>ATENDIMENTOS</h2>
+            <p>Gerencie os atendimentos realizados na clínica.</p>
+            <a href="{% url 'atendimentos:listar' %}" class="home-btn">
+                <i class="fas fa-sign-in-alt"></i> ACESSAR ATENDIMENTOS
+            </a>
+        </section>
     </main>
 {% endblock %}
+<<<<<<< HEAD
 >>>>>>> origin/paciente-models
+=======
+>>>>>>> origin/atendimento-templates
