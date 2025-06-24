@@ -64,10 +64,14 @@ INSTALLED_APPS = [
 =======
     'apps.categorias',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/categoria-models
 =======
     'apps.medicamento',
 >>>>>>> origin/medicamento-views
+=======
+    'apps.medicamentos',
+>>>>>>> origin/medicamento-templates
 ]
 
 MIDDLEWARE = [
