@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Listagem de Prontuários{% endblock %}
+
+{% block body %}
+<h1>Listagem de Prontuários</h1>
+
+<a href="{% url 'prontuarios:criar' %}">Novo Prontuário</a>
+
+<ul>
+    {% for prontuario in prontuarios %}
+        <li>
+            Paciente: {{ prontuario.paciente }}
+            <br>
+            Observações: {{ prontuario.observacoes }}
+            <br>
+            <a href="{% url 'prontuarios:editar' prontuario.id %}">Editar</a> |
+            <a href="{% url 'prontuarios:excluir' prontuario.id %}">Excluir</a>
+        </li>
+    {% empty %}
+        <li>Nenhum prontuário encontrado.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
