@@ -2,6 +2,8 @@
 {% block title %}Formulário de Paciente{% endblock %}
 
 {% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/pacientes.css' %}">
 <h2 class="text-primary my-4">{{ titulo }}</h2>
 
 <form method="post">
